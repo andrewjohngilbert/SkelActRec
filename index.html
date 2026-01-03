@@ -1,272 +1,231 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-81D6829LG0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-81D6829LG0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-81D6829LG0');
+  </script>
 
-  gtag('config', 'G-81D6829LG0');
-</script>
+  <!-- Canonical (update to your final URL) -->
+  <link rel="canonical" href="https://andrewjohngilbert.github.io/SkelActRec_FG26/" />
 
-<link rel="canonical" href="https://andrewjohngilbert.github.io/DEL_ICCV/" />
-
-
-<script type="application/ld+json">
+  <!-- Structured data (JSON-LD) -->
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "DEL: Dense Event Localization for Multi-modal Audio-Visual Understanding",
+    "headline": "Generative Data Augmentation for Skeleton Action Recognition",
     "author": [
-      { "@type": "Person", "name": "Mona Ahmadian" },
-      { "@type": "Person", "name": "Amir Shirian" },
-      { "@type": "Person", "name": "Frank Guerin" },
+      { "@type": "Person", "name": "Xu Dong" },
+      { "@type": "Person", "name": "Wanqing Li" },
+      { "@type": "Person", "name": "Anthony Adeyemi-Ejeye" },
       { "@type": "Person", "name": "Andrew Gilbert" }
     ],
-    "datePublished": "2025-10-01",
+    "datePublished": "2026-01-01",
     "publisher": {
       "@type": "Organization",
-      "name": "International Conference on Computer Vision (ICCV) - MMFM4 Workshop"
+      "name": "20th IEEE International Conference on Automatic Face and Gesture Recognition (FG'26)"
     },
-    "url": "https://andrewjohngilbert.github.io/DEL_ICCV/",
-    "image": "assets/MMKM_Del_Teaser.jpg",
-    "description": "We introduce DEL, a framework for dense semantic action localization, aiming to accurately detect and classify multiple actions at fine-grained temporal resolutions in long untrimmed videos. DEL leverages masked self-attention for intra-mode consistency and a multimodal interaction refinement module for cross-modal dependencies. Results on multiple real-world TAL datasets demonstrate more accurate analysis of complex, real-world scenes."
-
-    "keywords": ["Temporal Action Localization", "Audio-Visual", "Multimodal", "Dense Event Localization"],
-"sameAs": [
-  "https://andrewjohngilbert.github.io/DEL_ICCV/assets/MMKM_Del_Paper.pdf"
+    "url": "https://andrewjohngilbert.github.io/SkelActRec_FG26/",
+    "image": "assets/SkelActRec_Teaser.jpg",
+    "description": "We propose a conditional diffusion-based generative augmentation pipeline for skeleton action recognition. A Transformer encoder–decoder diffusion model conditioned on action labels synthesizes diverse, high-fidelity skeleton sequences. A Generative Refinement Module (GRM) and sampling-time dropout balance fidelity and diversity, improving downstream recognition accuracy in few-shot and full-data settings.",
+    "keywords": ["Skeleton Action Recognition", "Data Augmentation", "Diffusion Models", "Conditional Generation", "Transformer", "FG 2026"],
+    "sameAs": [
+      "https://andrewjohngilbert.github.io/SkelActRec_FG26/assets/SkelActRec_Paper.pdf",
+      "https://andrewjohngilbert.github.io/SkelActRec_FG26/assets/SkelActRec_supMat.pdf"
+    ]
   }
-</script>
+  </script>
 
+  <meta charset="utf-8">
+  <meta name="description" content="Generative Data Augmentation for Skeleton Action Recognition (FG'26, 2026). Conditional diffusion synthesizes label-consistent skeleton sequences. Improves downstream recognition on HumanAct12 and NTU-VIBE under few-shot and full-data settings.">
+  <meta property="og:title" content="Generative Data Augmentation for Skeleton Action Recognition"/>
+  <meta property="og:description" content="FG'26 2026. Conditional diffusion-based skeleton augmentation with GRM + sampling-time dropout improves recognition under limited data."/>
+  <meta property="og:url" content="https://andrewjohngilbert.github.io/SkelActRec_FG26/"/>
+  <meta property="og:image" content="assets/SkelActRec_Teaser.jpg" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
 
+  <meta name="twitter:title" content="Generative Data Augmentation for Skeleton Action Recognition">
+  <meta name="twitter:description" content="FG'26 2026. Conditional diffusion synthesizes label-consistent skeleton sequences; GRM + dropout balance fidelity/diversity.">
+  <meta name="twitter:image" content="assets/SkelActRec_Teaser.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-<meta charset="utf-8">
-<meta name="description" content="DEL: A framework for dense semantic action localization in long untrimmed videos. Results on UnAV-100, THUMOS14, ActivityNet 1.3, and EPIC-Kitchens-100.">
-<meta property="og:title" content="DEL: Dense Event Localization for Multi-modal Audio-Visual Understanding"/>
-<meta property="og:description" content="DEL accurately detects and classifies multiple actions at fine-grained temporal resolutions in long untrimmed videos using multimodal interaction."/>
-<meta property="og:url" content="https://andrewjohngilbert.github.io/DEL_ICCV/"/>
-<meta property="og:image" content="assets/MMKM_Del_Teaser.jpg" />
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="630"/>
-<meta name="twitter:title" content="DEL: Dense Event Localization for Multi-modal Audio-Visual Understanding">
-<meta name="twitter:description" content="DEL: A framework for dense semantic action localization in long untrimmed videos.">
-<meta name="twitter:image" content="assets/MMKM_Del_Teaser.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<!-- Keywords for your paper to be indexed by-->
-<meta name="keywords" content="Machine Learning, Video Understanding, Action Localization, Multimodal, Audio-Visual, DEL, Mona Ahmadian, Amir Shirian, Frank Guerin, Andrew Gilbert, ICCV 2025, MMFM4, Temporal Action Localization, UnAV-100, THUMOS14, ActivityNet, EPIC-Kitchens-100">
-<meta name="author" content="Mona Ahmadian, Amir Shirian, Frank Guerin, Andrew Gilbert">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Skeleton Action Recognition, Data Augmentation, Diffusion, Conditional Generation, Transformer, HumanAct12, NTU-VIBE, FG 2026, Xu Dong, Wanqing Li, Anthony Adeyemi-Ejeye, Andrew Gilbert">
+  <meta name="author" content="Xu Dong, Wanqing Li, Anthony Adeyemi-Ejeye, Andrew Gilbert">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <title>Generative Data Augmentation for Skeleton Action Recognition</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
-<title>DEL: Dense Event Localization for Multi-modal Audio-Visual Understanding</title>
-<link rel="icon" type="image/x-icon" href="static/images/favicon-32x32.png">
-<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
 
-<link rel="stylesheet" href="static/css/bulma.min.css">
-<link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-<link rel="stylesheet" href="static/css/bulma-slider.min.css">
-<link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-<link rel="stylesheet"
-href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-<link rel="stylesheet" href="static/css/index.css">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-<script defer src="static/js/fontawesome.all.min.js"></script>
-<script src="static/js/bulma-carousel.min.js"></script>
-<script src="static/js/bulma-slider.min.js"></script>
-<script src="static/js/index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
 </head>
-<body>
 
+<body>
 
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">DEL: Dense Event Localization for Multi-modal Audio-Visual Understanding</h1>
+
+          <h1 class="title is-1 publication-title">Generative Data Augmentation for Skeleton Action Recognition</h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://www.linkedin.com/in/xudong-442302166/" target="_blank">Xu Dong</a>,</span>
+            <span class="author-block"><a href="https://scholars.uow.edu.au/wanqing-li" target="_blank">Wanqing Li</a>,</span>
+            <span class="author-block"><a href="https://www.surrey.ac.uk/people/anthony-adeyemi-ejeye" target="_blank">Anthony Adeyemi-Ejeye</a>,</span>
+            <span class="author-block"><a href="https://andrewjohngilbert.github.io/" target="_blank">Andrew Gilbert</a></span>
+          </div>
+
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://www.linkedin.com/in/mona-ahmadian-57853521a/" target="_blank">Mona Ahmadian</a><sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://uk.linkedin.com/in/amir-shirian-6675587b" target="_blank">Amir Shirian</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.surrey.ac.uk/people/frank-guerin" target="_blank">Frank Guerin</a><sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://andrewjohngilbert.github.io/" target="_blank">Andrew Gilbert</a><sup>1</sup>
+              <em>20th IEEE International Conference on Automatic Face and Gesture Recognition (FG’26), 2026</em>
             </span>
           </div>
 
-          <div class="is-size-6 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Surrey &nbsp; <sup>2</sup>JPMorgan Chase</span>
-          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
 
-
-<div class="is-size-5 publication-authors">
-  <span class="author-block">
-    <a href="https://iccv2025.thecvf.com/" target="_blank">International Conference on Computer Vision (ICCV'25)</a> - 
-  <a href="https://sites.google.com/view/mmfm4thworkshop/" target="_blank">The 4th Workshop on What is Next in Multimodal Foundation Models? (MMFM4)</a>
-  </span>
-</div>
-
-              <div class="column has-text-centered">
-                <div class="publication-links">
-                     <!-- Paper PDF link -->
-                  <span class="link-block">
-                    <a href="assets/MMKM_Del_Paper.pdf" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                    </span>
-                    <span>Paper </span>
-                  </a>
-                </span>
-
-                <!-- Presentation PDF link -->
-               
-                <!--
-               <span class="link-block">
-                  <a href="https://andrewjohngilbert.github.io/DEL_ICCV/assets/HumanvsMachineMindsSpotlight.pdf" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Spotlight</span>
-                </a>
-              </span>  
-            -->
-
-                <!-- Poster PDF link -->
-                
-               <span class="link-block">
-                  <a href="assets/MMKM_Del_Poster.pdf" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Poster</span>
-                </a>
-              </span>
-            
-
-            
-            
-              
-                <!-- Github link -->
-                 <!--
+              <!-- Paper PDF link -->
               <span class="link-block">
-                  <a href="https://github.com/SadeghRahmaniB/Epic-ReduAct" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code & Dataset</span>
+                <a href="assets/SkelActRec_Paper.pdf" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
                 </a>
               </span>
-            -->
 
-                
+              <!-- Supplementary link -->
+              <span class="link-block">
+                <a href="assets/SkelActRec_supMat.pdf" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Supplementary</span>
+                </a>
+              </span>
+
+              <!-- Optional code button (uncomment when ready) -->
+              <!--
+              <span class="link-block">
+                <a href="https://github.com/yourrepo" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+              -->
+
             </div>
 
-
+            <!-- Share buttons -->
             <div class="columns is-centered" style="margin-top:0.75rem;">
               <div class="column is-narrow">
                 <div class="buttons are-small is-centered">
-                  <a href="https://twitter.com/intent/tweet?url=https://andrewjohngilbert.github.io/DEL_ICCV/&text=Check out DEL: Dense Event Localization for Multi-modal Audio-Visual Understanding!"
-                    target="_blank" class="button is-info is-light">
+                  <a href="https://twitter.com/intent/tweet?url=https://andrewjohngilbert.github.io/SkelActRec_FG26/&text=Generative Data Augmentation for Skeleton Action Recognition (FG'26)!"
+                     target="_blank" class="button is-info is-light">
                     <span class="icon"><i class="fab fa-twitter"></i></span><span>Tweet</span>
                   </a>
-                  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://andrewjohngilbert.github.io/DEL_ICCV/"
-                    target="_blank" class="button is-link is-light">
+                  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://andrewjohngilbert.github.io/SkelActRec_FG26/"
+                     target="_blank" class="button is-link is-light">
                     <span class="icon"><i class="fab fa-linkedin"></i></span><span>Share</span>
                   </a>
                 </div>
               </div>
             </div>
 
+            <!-- TL;DR -->
             <div class="content" style="margin-top:1rem;">
               <div class="box" style="text-align:left;">
-                <p style="margin-bottom:0.5rem;"><strong>TL;DR:</strong> DEL performs dense temporal localization of overlapping audio-visual events in long untrimmed videos.</p>
+                <p style="margin-bottom:0.5rem;">
+                  <strong>TL;DR:</strong> A label-conditioned diffusion model generates diverse, high-fidelity skeleton motion to augment training data, boosting skeleton action recognition—especially in low-data regimes.
+                </p>
                 <ul style="margin-top:0;">
-                  <li><strong>Masked self-attention</strong> improves intra-modal consistency for audio/visual streams.</li>
-                  <li><strong>Multimodal interaction refinement</strong> captures cross-modal dependencies at multiple scales.</li>
-                  <li><strong>Improved results</strong> on UnAV-100, THUMOS14, ActivityNet 1.3, and EPIC-Kitchens-100.</li>
+                  <li><strong>Conditional diffusion</strong> generates label-consistent skeleton sequences.</li>
+                  <li><strong>Transformer encoder–decoder</strong> models motion semantics and denoising.</li>
+                  <li><strong>GRM + sampling-time dropout</strong> balance fidelity and diversity during synthesis.</li>
                 </ul>
               </div>
             </div>
 
-          </div>
+          </div><!-- column -->
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
-
-<!-- Teaser Image -->
+<!-- Teaser Image (replace with your actual teaser asset) -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="assets/MMKM_Del_Teaser.jpg" alt="DEL qualitative comparison: GT vs audio-only vs visual-only vs DEL">
+      <img src="assets/SkelActRec_Teaser.jpg" alt="Conditional diffusion for skeleton augmentation (overview)">
       <h2 class="subtitle has-text-centered">
-        Real-world videos often feature overlapping events of different lengths, making localization difficult. This image compares ground-truth (GT) with predictions from DEL, an audio-only model (A), and a visual-only model (V). While A and V struggle with a specific category, DEL accurately detects both short and long events, even when overlapping.
+        Conditional diffusion synthesises diverse, label-consistent skeleton sequences that improve downstream recognition on HumanAct12 and NTU-VIBE.
       </h2>
     </div>
   </div>
 </section>
-<!-- End teaser Image -->
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
+<!-- Abstract -->
+<section class="section hero is-light" id="abstract">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Real-world videos often exhibit overlapping events and intricate temporal dependencies, posing significant challenges for effective multimodal interaction modeling. We introduce DEL, a framework for dense semantic action localization, aiming to accurately detect and classify multiple actions at fine-grained temporal resolutions in long untrimmed videos. DEL consists of two key modules: the alignment of audio and visual features, which leverages masked self-attention to enhance intra-mode consistency, and a multimodal interaction refinement module that models cross-modal dependencies across multiple scales, enabling both high-level semantics and fine-grained details. We report results on multiple real-world Temporal Action Localization (TAL) datasets, UnAV-100, THUMOS14, ActivityNet 1.3, and EPIC-Kitchens-100. The source code will be made publicly available. These advances enable more accurate analysis of complex, real-world scenes, from surveillance to accessible media understanding.
+            Skeleton-based human action recognition is powerful but collecting large-scale, diverse, well-annotated 3D skeleton datasets is expensive.
+            We propose a conditional generative pipeline for data augmentation in skeleton action recognition. The method learns the distribution of real
+            skeleton sequences under action-label constraints, enabling synthesis of diverse and high-fidelity data. A Transformer-based encoder–decoder,
+            combined with a Generative Refinement Module and sampling-time dropout, balances fidelity and diversity. Experiments on HumanAct12 and
+            refined NTU-RGBD (NTU-VIBE) show consistent improvements across multiple backbones in few-shot and full-data settings.
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
 
-
-
-<!-- Model-->
-<section class="hero teaser">
+<!-- Method / Architecture -->
+<section class="hero teaser" id="method">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <h2 class="title is-3">Overview of our proposed DEL framework</h2>
+      <h2 class="title is-3">Method Overview</h2>
       <h2 class="subtitle has-text-centered">
-         Our model integrates 1, an adaptive attention mechanism for aligning audio and visual features, 2, inter- and intra-sample contrastive learning to enhance event discrimination, and 3, a multi-scale path aggregation network for feature fusion. DEL efficiently localizes fine-grained and overlapping events in untrimmed videos, leveraging cross-modal dependencies for improved accuracy.
+        The model uses a Transformer conditional encoder (label + timestep) and a Transformer decoder that denoises a noise-corrupted skeleton sequence.
+        An auxiliary classifier encourages label-consistent generation. Sampling-time dropout increases diversity, while the GRM filters low-fidelity samples.
       </h2>
-      <img src="assets/MMKM_Del_Model.jpg">
+      <img src="assets/SkelActRec_Model.jpg" alt="Conditional skeleton diffusion architecture (see Fig. 2 in the paper)">
     </div>
   </div>
 </section>
-<!-- End Model-->
 
-
-<!-- Main Results-->
-<section class="section">
+<!-- Main Results (from Tables II & III) -->
+<section class="section" id="results">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Main Results</h2>
-
+    <h2 class="title is-3">Main Results (Augmentation Helps)</h2>
     <div class="content">
       <p>
-        DEL achieves state-of-the-art performance across four benchmarks for temporal action localization and dense audio-visual event localization.
-        Numbers below are taken from Tables 1–4 of the paper.
+        Accuracy (%) improves when training recognisers on real data augmented with synthetic skeleton sequences generated by our model.
+        Results below are reported as mean ± std over 5 runs.
       </p>
     </div>
 
@@ -274,162 +233,114 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
       <thead>
         <tr>
           <th>Dataset</th>
-          <th>Metric</th>
-          <th>Strong baseline</th>
-          <th>DEL (ours)</th>
+          <th>Backbone</th>
+          <th>Real Data</th>
+          <th>Baseline (Real Only)</th>
+          <th>+ Synthetic (Real + Ours)</th>
           <th>Δ</th>
         </tr>
       </thead>
       <tbody>
+        <!-- HumanAct12 (75% case shows big gains) -->
         <tr>
-          <td><strong>THUMOS14</strong></td>
-          <td>Avg mAP ↑</td>
-          <td>TriDet: 69.3</td>
-          <td><strong>71.9</strong></td>
-          <td><strong>+2.6</strong></td>
+          <td><strong>HumanAct12</strong></td>
+          <td>STGCN++</td>
+          <td>75%</td>
+          <td>73.89 ±0.38</td>
+          <td><strong>81.11 ±0.80</strong></td>
+          <td><strong>+7.22</strong></td>
         </tr>
         <tr>
-          <td><strong>ActivityNet-1.3</strong></td>
-          <td>Avg mAP ↑</td>
-          <td>TriDet: 36.8</td>
-          <td><strong>38.0</strong></td>
-          <td><strong>+1.2</strong></td>
+          <td><strong>HumanAct12</strong></td>
+          <td>MSG3D</td>
+          <td>95%</td>
+          <td>77.64 ±1.50</td>
+          <td><strong>83.24 ±1.23</strong></td>
+          <td><strong>+5.60</strong></td>
+        </tr>
+
+        <!-- NTU-VIBE (10% case shows big gains) -->
+        <tr>
+          <td><strong>NTU-VIBE</strong></td>
+          <td>BlockGCN</td>
+          <td>10%</td>
+          <td>75.05 ±1.43</td>
+          <td><strong>84.43 ±0.72</strong></td>
+          <td><strong>+9.38</strong></td>
         </tr>
         <tr>
-          <td><strong>EPIC-Kitchens-100 (Val)</strong></td>
-          <td>Avg mAP (Verb) ↑</td>
-          <td>TIM (VMAE2+ASlowFast): 28.6</td>
-          <td><strong>30.5</strong> (VMAE2+ASlowFast)</td>
-          <td><strong>+1.9</strong></td>
-        </tr>
-        <tr>
-          <td><strong>EPIC-Kitchens-100 (Val)</strong></td>
-          <td>Avg mAP (Noun) ↑</td>
-          <td>TIM (VMAE2+ASlowFast): 31.0</td>
-          <td><strong>28.1</strong> (VMAE2+ASlowFast)</td>
-          <td>—</td>
-        </tr>
-        <tr>
-          <td><strong>UnAV-100 (Test)</strong></td>
-          <td>Avg mAP ↑</td>
-          <td>UnAV baseline: 47.8</td>
-          <td><strong>51.1</strong></td>
-          <td><strong>+3.3</strong></td>
+          <td><strong>NTU-VIBE</strong></td>
+          <td>MSG3D</td>
+          <td>10%</td>
+          <td>79.48 ±1.87</td>
+          <td><strong>83.17 ±1.13</strong></td>
+          <td><strong>+3.69</strong></td>
         </tr>
       </tbody>
     </table>
 
     <div class="content is-small has-text-grey">
+      <p>Source: Tables II & III in the paper (HumanAct12 and Refined NTU-RGBD / NTU-VIBE). </p>
+    </div>
+  </div>
+</section>
+
+<!-- Supplementary: metrics -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">Generation Metrics</h2>
+    <div class="content">
       <p>
-        Source: DEL paper Tables 1–4 (THUMOS14, ActivityNet-1.3, EPIC-Kitchens-100, UnAV-100). 
+        We report fidelity and diversity using FID/KID, Diversity, and Precision/Recall, as described in the supplementary file.
       </p>
     </div>
   </div>
 </section>
-<!-- End Main Results-->
 
-<!-- Qualitative results-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-<h2 class="title is-3">Qualitative results</h2>
-<img src="assets/MMKM_Del_QualResult.jpg" alt="Recognition gap frequency distribution for Easy, Hard, and combined sets">
-      <h2 class="subtitle has-text-centered">
-         We present qualitative results demonstrating the effectiveness of our DEL framework in comparison to unimodal baselines. For the first example, our model, leveraging audio and visual streams, accurately localizes events such as wind noise, cars passing by, driving a motorcycle, and skidding, even in scenarios with overlapping or short-duration occurrences. In contrast, the audio-only model struggles with visually-driven events like skidding, while the vision-only model fails to detect sound-based events like wind noise. Moreover, relying solely on audio leads to incorrect predictions, such as misclassifying the scene as engine knocking due to the absence of visual context. Similarly, the vision-only model, lacking critical audio cues, misinterprets the scene as auto racing from start to finish, based purely on visual perception. This shows the impact of audio in disambiguating visually similar activities. Distinguishing between "man speaking" and another potential sound source in the third scenario is only possible with audio input, as visual information alone is insufficient. Similarly, in the last example,  the scene is crowded, making it challenging to infer "people cheering" using only visual cues. The vision-only model struggles to recognize this category, while the audio modality provides crucial information for its correct identification. Additionally, detecting "people slapping" relies primarily on visual cues. These results highlight how integrating audio and visual streams leads to more accurate and robust event localization, particularly in complex multimodal scenarios.
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End Qualitative results-->
-
-<!-- Spotlight Presentation -->
-<!--
-  <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Spotlight</h2>
-
-      <iframe  src="https://andrewjohngilbert.github.io/DEL_ICCV/assets/HumanvsMachineMindsSpotlight.pdf" width="100%" height="1000">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
--->
-  <!--End Spotlight Presentation -->
-
-<!-- Paper poster -->
-
-  <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="assets/MMKM_Del_Poster.pdf" width="100%" height="1000">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-  <!--End paper poster -->
-
-
-<!--BibTex citation -->
+<!-- BibTeX -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <button class="button is-small is-info" onclick="copyBibtex()">Copy BibTeX</button>
-<pre id="bibtex-entry"><code>@inproceedings{Ahmadian:DEL:ICCVWS:2025,
-  AUTHOR = "Mona Ahmadian and Amir Shirian and Frank Guerin and Andrew Gilbert",
-  TITLE = "DEL: Dense Event Localization for Multi-modal Audio-Visual Understanding",
-  BOOKTITLE = "International Conference on Computer Vision (ICCV'25) - The 4th Workshop on What is Next in Multimodal Foundation Models? (MMFM4)",
-  YEAR = "2025"
+    <pre id="bibtex-entry"><code>@inproceedings{Dong2026SkelAug,
+  author    = {Xu Dong and Wanqing Li and Anthony Adeyemi-Ejeye and Andrew Gilbert},
+  title     = {Generative Data Augmentation for Skeleton Action Recognition},
+  booktitle = {20th IEEE International Conference on Automatic Face and Gesture Recognition (FG'26)},
+  year      = {2026}
 }</code></pre>
     <script>
-    function copyBibtex() {
-      var bib = document.getElementById('bibtex-entry').innerText;
-      navigator.clipboard.writeText(bib);
-    }
+      function copyBibtex() {
+        var bib = document.getElementById('bibtex-entry').innerText;
+        navigator.clipboard.writeText(bib);
+      }
     </script>
   </div>
 </section>
-
-<!--End BibTex citation -->
-
-
-
 
 <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-
           <p>
-            <strong>DEL: Dense Event Localization for Multi-modal Audio-Visual Understanding</strong> by 
-            <a href="https://www.linkedin.com/in/mona-ahmadian-57853521a/" target="_blank">Mona Ahmadian</a>, 
-            <a href="https://uk.linkedin.com/in/amir-shirian-6675587b" target="_blank">Amir Shirian</a>, 
-            <a href="https://www.surrey.ac.uk/people/frank-guerin" target="_blank">Frank Guerin</a>, and 
+            <strong>Generative Data Augmentation for Skeleton Action Recognition</strong> by
+            <a href="https://www.linkedin.com/in/xudong-442302166/" target="_blank">Xu Dong</a>,
+            <a href="https://scholars.uow.edu.au/wanqing-li" target="_blank">Wanqing Li</a>,
+            <a href="https://www.surrey.ac.uk/people/anthony-adeyemi-ejeye" target="_blank">Anthony Adeyemi-Ejeye</a>, and
             <a href="https://andrewjohngilbert.github.io/" target="_blank">Andrew Gilbert</a>.<br>
-            <em>International Conference on Computer Vision (ICCV'25) - The 4th Workshop on What is Next in Multimodal Foundation Models? (MMFM4)</em>
+            <em>FG’26, 2026</em>
+            <br><br>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>
+            adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
             <br>
-            <br>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the design of this website; we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+              CC BY-SA 4.0</a>.
           </p>
-
         </div>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
