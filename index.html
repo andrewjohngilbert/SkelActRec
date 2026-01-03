@@ -11,114 +11,197 @@
   gtag('config', 'G-81D6829LG0');
 </script>
 
-  <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="This research introduces a novel approach integrating 3D features and depth maps alongside RGB features to enhance action recognition accuracy. Our method involves processing estimated depth maps through a separate branch from the RGB feature encoder and fusing the features to understand the scene and actions comprehensively. Using the Side4Video framework and VideoMamba, which employ CLIP and VisionMamba for spatial feature extraction, our approach outperformed our implementation of the Side4Video network on the Something-Something V2 dataset.">
-  <meta property="og:title" content="DEAR: Depth-Estimated Action Recognition"/>
-  <meta property="og:description" content="This research introduces a novel approach integrating 3D features and depth maps alongside RGB features to enhance action recognition accuracy. Our method involves processing estimated depth maps through a separate branch from the RGB feature encoder and fusing the features to understand the scene and actions comprehensively. Using the Side4Video framework and VideoMamba, which employ CLIP and VisionMamba for spatial feature extraction, our approach outperformed our implementation of the Side4Video network on the Something-Something V2 dataset."/>
-  <meta property="og:url" content="https://andrewjohngilbert.github.io/dear/"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="assets/dear_Teaser.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+<link rel="canonical" href="https://andrewjohngilbert.github.io/DEL_ICCV/" />
 
 
-  <meta name="twitter:title" content="DEAR: Depth-Estimated Action Recognition">
-  <meta name="twitter:description" content="This research introduces a novel approach integrating 3D features and depth maps alongside RGB features to enhance action recognition accuracy. Our method involves processing estimated depth maps through a separate branch from the RGB feature encoder and fusing the features to understand the scene and actions comprehensively. Using the Side4Video framework and VideoMamba, which employ CLIP and VisionMamba for spatial feature extraction, our approach outperformed our implementation of the Side4Video network on the Something-Something V2 dataset">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="asserts/dear_Teaser.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="Machine Learning, Depth, Video Understanding,andrew Gilbert, Sadegh Rahmani,">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "DEL: Dense Event Localization for Multi-modal Audio-Visual Understanding",
+    "author": [
+      { "@type": "Person", "name": "Mona Ahmadian" },
+      { "@type": "Person", "name": "Amir Shirian" },
+      { "@type": "Person", "name": "Frank Guerin" },
+      { "@type": "Person", "name": "Andrew Gilbert" }
+    ],
+    "datePublished": "2025-10-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "International Conference on Computer Vision (ICCV) - MMFM4 Workshop"
+    },
+    "url": "https://andrewjohngilbert.github.io/DEL_ICCV/",
+    "image": "assets/MMKM_Del_Teaser.jpg",
+    "description": "We introduce DEL, a framework for dense semantic action localization, aiming to accurately detect and classify multiple actions at fine-grained temporal resolutions in long untrimmed videos. DEL leverages masked self-attention for intra-mode consistency and a multimodal interaction refinement module for cross-modal dependencies. Results on multiple real-world TAL datasets demonstrate more accurate analysis of complex, real-world scenes."
+
+    "keywords": ["Temporal Action Localization", "Audio-Visual", "Multimodal", "Dense Event Localization"],
+"sameAs": [
+  "https://andrewjohngilbert.github.io/DEL_ICCV/assets/MMKM_Del_Paper.pdf"
+  }
+</script>
 
 
-  <title>DEAR: Depth-Estimated Action Recognition</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
 
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+<meta charset="utf-8">
+<meta name="description" content="DEL: A framework for dense semantic action localization in long untrimmed videos. Results on UnAV-100, THUMOS14, ActivityNet 1.3, and EPIC-Kitchens-100.">
+<meta property="og:title" content="DEL: Dense Event Localization for Multi-modal Audio-Visual Understanding"/>
+<meta property="og:description" content="DEL accurately detects and classifies multiple actions at fine-grained temporal resolutions in long untrimmed videos using multimodal interaction."/>
+<meta property="og:url" content="https://andrewjohngilbert.github.io/DEL_ICCV/"/>
+<meta property="og:image" content="assets/MMKM_Del_Teaser.jpg" />
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:title" content="DEL: Dense Event Localization for Multi-modal Audio-Visual Understanding">
+<meta name="twitter:description" content="DEL: A framework for dense semantic action localization in long untrimmed videos.">
+<meta name="twitter:image" content="assets/MMKM_Del_Teaser.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Keywords for your paper to be indexed by-->
+<meta name="keywords" content="Machine Learning, Video Understanding, Action Localization, Multimodal, Audio-Visual, DEL, Mona Ahmadian, Amir Shirian, Frank Guerin, Andrew Gilbert, ICCV 2025, MMFM4, Temporal Action Localization, UnAV-100, THUMOS14, ActivityNet, EPIC-Kitchens-100">
+<meta name="author" content="Mona Ahmadian, Amir Shirian, Frank Guerin, Andrew Gilbert">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
+
+<title>DEL: Dense Event Localization for Multi-modal Audio-Visual Understanding</title>
+<link rel="icon" type="image/x-icon" href="static/images/favicon-32x32.png">
+<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+rel="stylesheet">
+
+<link rel="stylesheet" href="static/css/bulma.min.css">
+<link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+<link rel="stylesheet" href="static/css/bulma-slider.min.css">
+<link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<link rel="stylesheet" href="static/css/index.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+<script defer src="static/js/fontawesome.all.min.js"></script>
+<script src="static/js/bulma-carousel.min.js"></script>
+<script src="static/js/bulma-slider.min.js"></script>
+<script src="static/js/index.js"></script>
 </head>
 <body>
 
 
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">DEAR: Depth-Estimated Action Recognition</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="https://www.linkedin.com/in/sadegh-rahmani" target="_blank">Sadegh Rahmani</a>[1]<sup></sup>,</span>
-                <span class="author-block">
-                  <a href="F" target="_blank">Filip Rybansky</a>[2]<sup></sup>,</span>
-                  <span class="author-block">
-                    <a href="https://www.ncl.ac.uk/medical-sciences/people/profile/quocvuong.html" target="_blank">Quoc Vuong</a>[2]<sup></sup>,</span>
-                <span class="author-block">
-                  <a href="https://www.surrey.ac.uk/people/frank-guerin" target="_blank">Frank Guerin</a>[1]<sup></sup>,</span>
-                  <span class="author-block">
-                    <a href="https://andrewjohngilbert.github.io/" target="_blank">Andrew Gilbert</a>[1]<sup></sup>,</span>
-                  </div>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">DEL: Dense Event Localization for Multi-modal Audio-Visual Understanding</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/mona-ahmadian-57853521a/" target="_blank">Mona Ahmadian</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://uk.linkedin.com/in/amir-shirian-6675587b" target="_blank">Amir Shirian</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.surrey.ac.uk/people/frank-guerin" target="_blank">Frank Guerin</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://andrewjohngilbert.github.io/" target="_blank">Andrew Gilbert</a><sup>1</sup>
+            </span>
+          </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">[1] Unviersity of Surrey [2] Unviersityof Newcastle<br> <a href="https://eccv2024.ecva.net/" target="_blank">The European Conference of Computer Vision 2024</a> <a href="https://sites.google.com/view/hcvworkshop2024" target="_blank">Human-inspired Computer Vision Workshop</a>              
-                  </div>
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Surrey &nbsp; <sup>2</sup>JPMorgan Chase</span>
+          </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://andrewjohngilbert.github.io/dear/assets/dear_paper.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
 
-                    <!-- Supplementary PDF link -->
-                   <span class="link-block">
-                      <a href="assets/DEAR HCV Poster.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Poster</span>
-                    </a>
-                  </span>
- 
-                  <!-- Github link -->
-                <span class="link-block">
-                    <a href="https://github.com/SadeghRahmaniB/DEAR" target="_blank"
+<div class="is-size-5 publication-authors">
+  <span class="author-block">
+    <a href="https://iccv2025.thecvf.com/" target="_blank">International Conference on Computer Vision (ICCV'25)</a> - 
+  <a href="https://sites.google.com/view/mmfm4thworkshop/" target="_blank">The 4th Workshop on What is Next in Multimodal Foundation Models? (MMFM4)</a>
+  </span>
+</div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                     <!-- Paper PDF link -->
+                  <span class="link-block">
+                    <a href="assets/MMKM_Del_Paper.pdf" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
-                      <i class="fab fa-github"></i>
+                      <i class="fas fa-file-pdf"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Paper </span>
                   </a>
                 </span>
+
+                <!-- Presentation PDF link -->
+               
+                <!--
+               <span class="link-block">
+                  <a href="https://andrewjohngilbert.github.io/DEL_ICCV/assets/HumanvsMachineMindsSpotlight.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Spotlight</span>
+                </a>
+              </span>  
+            -->
+
+                <!-- Poster PDF link -->
+                
+               <span class="link-block">
+                  <a href="assets/MMKM_Del_Poster.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Poster</span>
+                </a>
+              </span>
+            
+
+            
+            
               
+                <!-- Github link -->
+                 <!--
+              <span class="link-block">
+                  <a href="https://github.com/SadeghRahmaniB/Epic-ReduAct" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code & Dataset</span>
+                </a>
+              </span>
+            -->
 
                 
             </div>
+
+
+            <div class="columns is-centered" style="margin-top:0.75rem;">
+              <div class="column is-narrow">
+                <div class="buttons are-small is-centered">
+                  <a href="https://twitter.com/intent/tweet?url=https://andrewjohngilbert.github.io/DEL_ICCV/&text=Check out DEL: Dense Event Localization for Multi-modal Audio-Visual Understanding!"
+                    target="_blank" class="button is-info is-light">
+                    <span class="icon"><i class="fab fa-twitter"></i></span><span>Tweet</span>
+                  </a>
+                  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://andrewjohngilbert.github.io/DEL_ICCV/"
+                    target="_blank" class="button is-link is-light">
+                    <span class="icon"><i class="fab fa-linkedin"></i></span><span>Share</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="content" style="margin-top:1rem;">
+              <div class="box" style="text-align:left;">
+                <p style="margin-bottom:0.5rem;"><strong>TL;DR:</strong> DEL performs dense temporal localization of overlapping audio-visual events in long untrimmed videos.</p>
+                <ul style="margin-top:0;">
+                  <li><strong>Masked self-attention</strong> improves intra-modal consistency for audio/visual streams.</li>
+                  <li><strong>Multimodal interaction refinement</strong> captures cross-modal dependencies at multiple scales.</li>
+                  <li><strong>Improved results</strong> on UnAV-100, THUMOS14, ActivityNet 1.3, and EPIC-Kitchens-100.</li>
+                </ul>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -127,18 +210,19 @@
 </section>
 
 
-<!-- Teaser video-->
+
+<!-- Teaser Image -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="assets/dear_teaser.jpg">
+      <img src="assets/MMKM_Del_Teaser.jpg" alt="DEL qualitative comparison: GT vs audio-only vs visual-only vs DEL">
       <h2 class="subtitle has-text-centered">
-        We perform supervised action recognition using a fusion of RGB and depth map frames. We used S4V network for processing RGB and the same network plus VideoMamba to extract depth features. Gated cross-attention (GCA) has been used for fusing modalities, while mean operation has been selected for fusing models' scores.
+        Real-world videos often feature overlapping events of different lengths, making localization difficult. This image compares ground-truth (GT) with predictions from DEL, an audio-only model (A), and a visual-only model (V). While A and V struggle with a specific category, DEL accurately detects both short and long events, even when overlapping.
       </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End teaser Image -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -148,7 +232,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Detecting actions in videos, particularly within cluttered scenes, poses significant challenges due to the limitations of 2D frame analysis from a camera perspective. Unlike human vision, which benefits from 3D understanding, recognizing actions in such environments can be difficult. This research introduces a novel approach integrating 3D features and depth maps alongside RGB features to enhance action recognition accuracy. Our method involves processing estimated depth maps through a separate branch from the RGB feature encoder and fusing the features to understand the scene and actions comprehensively. Using the Side4Video framework and VideoMamba, which employ CLIP and VisionMamba for spatial feature extraction, our approach outperformed our implementation of the Side4Video network on the Something-Something V2 dataset.
+            Real-world videos often exhibit overlapping events and intricate temporal dependencies, posing significant challenges for effective multimodal interaction modeling. We introduce DEL, a framework for dense semantic action localization, aiming to accurately detect and classify multiple actions at fine-grained temporal resolutions in long untrimmed videos. DEL consists of two key modules: the alignment of audio and visual features, which leverages masked self-attention to enhance intra-mode consistency, and a multimodal interaction refinement module that models cross-modal dependencies across multiple scales, enabling both high-level semantics and fine-grained details. We report results on multiple real-world Temporal Action Localization (TAL) datasets, UnAV-100, THUMOS14, ActivityNet 1.3, and EPIC-Kitchens-100. The source code will be made publicly available. These advances enable more accurate analysis of complex, real-world scenes, from surveillance to accessible media understanding.
           </p>
         </div>
       </div>
@@ -159,6 +243,121 @@
 
 
 
+<!-- Model-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3">Overview of our proposed DEL framework</h2>
+      <h2 class="subtitle has-text-centered">
+         Our model integrates 1, an adaptive attention mechanism for aligning audio and visual features, 2, inter- and intra-sample contrastive learning to enhance event discrimination, and 3, a multi-scale path aggregation network for feature fusion. DEL efficiently localizes fine-grained and overlapping events in untrimmed videos, leveraging cross-modal dependencies for improved accuracy.
+      </h2>
+      <img src="assets/MMKM_Del_Model.jpg">
+    </div>
+  </div>
+</section>
+<!-- End Model-->
+
+
+<!-- Main Results-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Main Results</h2>
+
+    <div class="content">
+      <p>
+        DEL achieves state-of-the-art performance across four benchmarks for temporal action localization and dense audio-visual event localization.
+        Numbers below are taken from Tables 1–4 of the paper.
+      </p>
+    </div>
+
+    <table class="table is-striped is-hoverable is-fullwidth">
+      <thead>
+        <tr>
+          <th>Dataset</th>
+          <th>Metric</th>
+          <th>Strong baseline</th>
+          <th>DEL (ours)</th>
+          <th>Δ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>THUMOS14</strong></td>
+          <td>Avg mAP ↑</td>
+          <td>TriDet: 69.3</td>
+          <td><strong>71.9</strong></td>
+          <td><strong>+2.6</strong></td>
+        </tr>
+        <tr>
+          <td><strong>ActivityNet-1.3</strong></td>
+          <td>Avg mAP ↑</td>
+          <td>TriDet: 36.8</td>
+          <td><strong>38.0</strong></td>
+          <td><strong>+1.2</strong></td>
+        </tr>
+        <tr>
+          <td><strong>EPIC-Kitchens-100 (Val)</strong></td>
+          <td>Avg mAP (Verb) ↑</td>
+          <td>TIM (VMAE2+ASlowFast): 28.6</td>
+          <td><strong>30.5</strong> (VMAE2+ASlowFast)</td>
+          <td><strong>+1.9</strong></td>
+        </tr>
+        <tr>
+          <td><strong>EPIC-Kitchens-100 (Val)</strong></td>
+          <td>Avg mAP (Noun) ↑</td>
+          <td>TIM (VMAE2+ASlowFast): 31.0</td>
+          <td><strong>28.1</strong> (VMAE2+ASlowFast)</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>UnAV-100 (Test)</strong></td>
+          <td>Avg mAP ↑</td>
+          <td>UnAV baseline: 47.8</td>
+          <td><strong>51.1</strong></td>
+          <td><strong>+3.3</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="content is-small has-text-grey">
+      <p>
+        Source: DEL paper Tables 1–4 (THUMOS14, ActivityNet-1.3, EPIC-Kitchens-100, UnAV-100). 
+      </p>
+    </div>
+  </div>
+</section>
+<!-- End Main Results-->
+
+<!-- Qualitative results-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+<h2 class="title is-3">Qualitative results</h2>
+<img src="assets/MMKM_Del_QualResult.jpg" alt="Recognition gap frequency distribution for Easy, Hard, and combined sets">
+      <h2 class="subtitle has-text-centered">
+         We present qualitative results demonstrating the effectiveness of our DEL framework in comparison to unimodal baselines. For the first example, our model, leveraging audio and visual streams, accurately localizes events such as wind noise, cars passing by, driving a motorcycle, and skidding, even in scenarios with overlapping or short-duration occurrences. In contrast, the audio-only model struggles with visually-driven events like skidding, while the vision-only model fails to detect sound-based events like wind noise. Moreover, relying solely on audio leads to incorrect predictions, such as misclassifying the scene as engine knocking due to the absence of visual context. Similarly, the vision-only model, lacking critical audio cues, misinterprets the scene as auto racing from start to finish, based purely on visual perception. This shows the impact of audio in disambiguating visually similar activities. Distinguishing between "man speaking" and another potential sound source in the third scenario is only possible with audio input, as visual information alone is insufficient. Similarly, in the last example,  the scene is crowded, making it challenging to infer "people cheering" using only visual cues. The vision-only model struggles to recognize this category, while the audio modality provides crucial information for its correct identification. Additionally, detecting "people slapping" relies primarily on visual cues. These results highlight how integrating audio and visual streams leads to more accurate and robust event localization, particularly in complex multimodal scenarios.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End Qualitative results-->
+
+<!-- Spotlight Presentation -->
+<!--
+  <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Spotlight</h2>
+
+      <iframe  src="https://andrewjohngilbert.github.io/DEL_ICCV/assets/HumanvsMachineMindsSpotlight.pdf" width="100%" height="1000">
+          </iframe>
+        
+      </div>
+    </div>
+  </section>
+-->
+  <!--End Spotlight Presentation -->
+
 <!-- Paper poster -->
 
   <section class="hero is-small is-light">
@@ -166,39 +365,57 @@
     <div class="container">
       <h2 class="title">Poster</h2>
 
-      <iframe  src="assets/DEAR HCV Poster.pdf" width="100%" height="1000">
+      <iframe  src="assets/MMKM_Del_Poster.pdf" width="100%" height="1000">
           </iframe>
         
       </div>
     </div>
   </section>
-<!--End paper poster -->
+  <!--End paper poster -->
 
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{Rahmani:Dear:ECCVWS:2024,
-        AUTHOR = Rahmani, Sadegh and Rybansky, Filip and Vuong, Quoc and Guerin, Frank and Gilbert, Andrew ",
-        TITLE = "DEAR: Depth-Estimated Action Recognition",
-        BOOKTITLE = " The European Conference of Computer Vision 2024, Human-inspired Computer Vision Workshop",
-        YEAR = "2024",
-        }</code></pre>
-    </div>
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <button class="button is-small is-info" onclick="copyBibtex()">Copy BibTeX</button>
+<pre id="bibtex-entry"><code>@inproceedings{Ahmadian:DEL:ICCVWS:2025,
+  AUTHOR = "Mona Ahmadian and Amir Shirian and Frank Guerin and Andrew Gilbert",
+  TITLE = "DEL: Dense Event Localization for Multi-modal Audio-Visual Understanding",
+  BOOKTITLE = "International Conference on Computer Vision (ICCV'25) - The 4th Workshop on What is Next in Multimodal Foundation Models? (MMFM4)",
+  YEAR = "2025"
+}</code></pre>
+    <script>
+    function copyBibtex() {
+      var bib = document.getElementById('bibtex-entry').innerText;
+      navigator.clipboard.writeText(bib);
+    }
+    </script>
+  </div>
 </section>
+
 <!--End BibTex citation -->
 
 
-  <footer class="footer">
+
+
+<footer class="footer">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            <strong>DEL: Dense Event Localization for Multi-modal Audio-Visual Understanding</strong> by 
+            <a href="https://www.linkedin.com/in/mona-ahmadian-57853521a/" target="_blank">Mona Ahmadian</a>, 
+            <a href="https://uk.linkedin.com/in/amir-shirian-6675587b" target="_blank">Amir Shirian</a>, 
+            <a href="https://www.surrey.ac.uk/people/frank-guerin" target="_blank">Frank Guerin</a>, and 
+            <a href="https://andrewjohngilbert.github.io/" target="_blank">Andrew Gilbert</a>.<br>
+            <em>International Conference on Computer Vision (ICCV'25) - The 4th Workshop on What is Next in Multimodal Foundation Models? (MMFM4)</em>
+            <br>
+            <br>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the design of this website; we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
 
